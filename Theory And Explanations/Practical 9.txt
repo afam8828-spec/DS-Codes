@@ -1,0 +1,355 @@
+# Practical 9: Data Visualization-II — Box Plot for Age Distribution by Gender and Survival
+
+## What We Are Doing in This Practical
+
+In this practical, we use the **Titanic dataset** and create a **box plot** to analyze:
+
+* Age distribution
+* Gender-wise comparison
+* Survival status comparison
+
+We visualize how passenger age varies with:
+
+* Male/Female
+* Survived/Not Survived 
+
+This practical is important because it teaches:
+
+* Box plot interpretation
+* Data distribution analysis
+* Outlier visualization
+* Comparative analysis using plots
+
+---
+
+# 1. What is a Box Plot?
+
+Most important viva topic.
+
+## Definition
+
+A box plot is a graphical representation used to display:
+
+* distribution
+* spread
+* median
+* quartiles
+* outliers
+
+of numerical data. 
+
+---
+
+# 2. Why Box Plot is Used?
+
+## Viva Answer
+
+Box plots help compare distributions and identify variability and outliers efficiently.
+
+---
+
+# 3. Components of Box Plot
+
+Important viva point.
+
+| Component | Meaning        |
+| --------- | -------------- |
+| Minimum   | Smallest value |
+| Q1        | First quartile |
+| Median    | Middle value   |
+| Q3        | Third quartile |
+| Maximum   | Largest value  |
+| Outliers  | Extreme values |
+
+---
+
+# 4. Median in Box Plot
+
+## Definition
+
+The middle line inside the box represents median.
+
+It divides data into two equal halves.
+
+---
+
+# 5. Interquartile Range (IQR)
+
+## Definition
+
+Difference between Q3 and Q1.
+
+Formula:
+
+IQR = Q_3 - Q_1
+
+---
+
+# 6. Why IQR is Important in Box Plot?
+
+Because the box length represents spread of middle 50% of data.
+
+---
+
+# 7. Quartiles in Box Plot
+
+| Quartile | Meaning        |
+| -------- | -------------- |
+| Q1       | 25% data below |
+| Q2       | Median         |
+| Q3       | 75% data below |
+
+---
+
+# 8. What are Whiskers?
+
+## Definition
+
+Lines extending from box showing spread outside quartiles.
+
+---
+
+# 9. Outliers in Box Plot
+
+## Definition
+
+Data points lying far away from normal range.
+
+They appear as separate points outside whiskers.
+
+---
+
+# 10. Why Box Plot is Better Than Histogram Sometimes?
+
+## Viva Answer
+
+Because it provides:
+
+* median
+* spread
+* quartiles
+* outliers
+
+all in a compact visualization.
+
+---
+
+# 11. Gender-wise Age Distribution
+
+This practical compares:
+
+```text id="8rzm7v"
+Male vs Female age distribution
+```
+
+using box plot. 
+
+---
+
+# 12. Survival Status Analysis
+
+The plot also compares:
+
+```text id="byvkx5"
+Survived vs Not Survived
+```
+
+using color grouping.
+
+---
+
+# 13. Hue in Visualization
+
+## Definition
+
+Hue is used to separate categories using different colors.
+
+In this practical:
+
+```text id="hkn0zv"
+Survival status
+```
+
+is shown using hue.
+
+---
+
+# 14. Comparative Visualization
+
+## Definition
+
+Visualization comparing multiple groups simultaneously.
+
+This practical compares:
+
+* gender
+* age
+* survival
+
+together.
+
+---
+
+# 15. Data Spread
+
+## Definition
+
+Spread describes how widely values are distributed.
+
+---
+
+# 16. Wide vs Narrow Box
+
+| Box Type   | Meaning          |
+| ---------- | ---------------- |
+| Wide box   | High variability |
+| Narrow box | Low variability  |
+
+---
+
+# 17. Skewness in Box Plot
+
+Skewness can be identified if:
+
+* median not centered
+* whiskers unequal length
+
+---
+
+# 18. Why Visualization Helps in Comparison?
+
+## Viva Answer
+
+Because graphical representation makes patterns and differences easier to observe than raw numbers.
+
+---
+
+# 19. Titanic Dataset Insights
+
+This practical helps analyze:
+
+* whether younger passengers survived more
+* age differences between genders
+* variability in passenger ages
+
+---
+
+# 20. Seaborn Boxplot
+
+## Definition
+
+A Seaborn visualization function used for statistical distribution analysis.
+
+---
+
+# 21. Advantages of Box Plot
+
+## Viva Points
+
+* Easy comparison
+* Detects outliers
+* Shows spread clearly
+* Compact statistical summary
+
+---
+
+# 22. Limitations of Box Plot
+
+## Viva Points
+
+* Does not show exact distribution shape
+* Less detailed than histogram
+
+---
+
+# 23. Applications of Box Plot
+
+Used in:
+
+* Statistical analysis
+* Medical research
+* Financial analytics
+* Machine learning preprocessing
+* Data quality analysis
+
+---
+
+# 24. Important Viva Questions and Answers
+
+---
+
+## Q1. What is a box plot?
+
+A statistical graph showing distribution, quartiles, median, and outliers.
+
+---
+
+## Q2. What does the box represent?
+
+Middle 50% of data between Q1 and Q3.
+
+---
+
+## Q3. What is IQR?
+
+Difference between third quartile and first quartile.
+
+---
+
+## Q4. What are whiskers?
+
+Lines showing spread outside quartiles.
+
+---
+
+## Q5. How are outliers shown in box plot?
+
+As individual points outside whiskers.
+
+---
+
+## Q6. Why are box plots useful?
+
+They summarize distribution and identify outliers efficiently.
+
+---
+
+## Q7. What does median represent in box plot?
+
+Middle value of dataset.
+
+---
+
+## Q8. What is hue in Seaborn?
+
+A parameter used to separate categories using colors.
+
+---
+
+# 25. Practical Flow
+
+```text id="6a6ofg"
+Load Titanic Dataset
+↓
+Select Age, Gender, Survival Features
+↓
+Create Box Plot
+↓
+Group by Gender
+↓
+Differentiate Survival Status
+↓
+Analyze Median and Spread
+↓
+Identify Outliers
+↓
+Draw Inferences
+```
+
+---
+
+# 26. Conclusion of Practical 9
+
+## Viva Conclusion Answer
+
+In this practical, we visualized the age distribution of Titanic passengers using box plots based on gender and survival status. The box plot helped identify median age, variability, quartiles, and outliers among different passenger groups. Such visualizations are useful for comparative statistical analysis and exploratory data analysis. 

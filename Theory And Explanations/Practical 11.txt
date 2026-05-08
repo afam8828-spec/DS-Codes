@@ -1,0 +1,424 @@
+# Practical 11: Creating Databases and Running Queries using Impala
+
+## What We Are Doing in This Practical
+
+In this practical, we learn basic database operations using **Impala**.
+We:
+
+* Create databases
+* Create tables
+* Insert data
+* Run SQL queries for data retrieval and analysis 
+
+This practical is important because databases are the foundation of:
+
+* Data Science
+* Big Data
+* Data Analytics
+* Data Engineering
+
+---
+
+# 1. What is a Database?
+
+Most important viva topic.
+
+## Definition
+
+A database is an organized collection of related data stored electronically for easy access, management, and retrieval.
+
+---
+
+# 2. Why Databases are Important?
+
+## Viva Answer
+
+Databases help:
+
+* store large amounts of data
+* manage data efficiently
+* retrieve data quickly
+* maintain data consistency
+
+---
+
+# 3. What is DBMS?
+
+## Definition
+
+DBMS (Database Management System) is software used to create, manage, and manipulate databases.
+
+Examples:
+
+* MySQL
+* Oracle
+* PostgreSQL
+
+---
+
+# 4. What is SQL?
+
+Very important.
+
+## Definition
+
+SQL (Structured Query Language) is a language used to communicate with databases.
+
+Used for:
+
+* creating tables
+* inserting data
+* retrieving data
+* updating records
+
+---
+
+# 5. Types of SQL Commands
+
+| Type | Purpose                   |
+| ---- | ------------------------- |
+| DDL  | Define database structure |
+| DML  | Manipulate data           |
+| DQL  | Retrieve data             |
+| DCL  | Access control            |
+
+---
+
+# 6. What is Impala?
+
+Most important practical topic.
+
+## Definition
+
+Apache Impala is an open-source SQL query engine used for fast processing of large datasets stored in Hadoop.
+
+---
+
+# 7. Why Impala is Used?
+
+## Viva Answer
+
+Impala enables high-speed SQL queries on big data stored in distributed systems.
+
+---
+
+# 8. Features of Impala
+
+## Viva Points
+
+* Fast query execution
+* SQL support
+* Big data processing
+* Hadoop integration
+* Scalable architecture
+
+---
+
+# 9. What is Hadoop?
+
+## Definition
+
+Hadoop is a framework used for distributed storage and processing of large datasets.
+
+---
+
+# 10. What is Big Data?
+
+## Definition
+
+Big Data refers to extremely large and complex datasets that cannot be processed using traditional systems.
+
+---
+
+# 11. What is a Table?
+
+## Definition
+
+A table is a structured collection of rows and columns inside database.
+
+---
+
+# 12. Row and Column
+
+| Term   | Meaning         |
+| ------ | --------------- |
+| Row    | Single record   |
+| Column | Attribute/field |
+
+---
+
+# 13. What is Schema?
+
+## Definition
+
+Schema is the structure or blueprint of a database.
+
+It defines:
+
+* table names
+* column names
+* datatypes
+* relationships
+
+---
+
+# 14. What is Primary Key?
+
+## Definition
+
+A primary key uniquely identifies each record in a table.
+
+Properties:
+
+* unique
+* cannot be NULL
+
+---
+
+# 15. What is NULL Value in Database?
+
+## Definition
+
+NULL represents missing or unknown value in database.
+
+---
+
+# 16. CREATE DATABASE
+
+## Purpose
+
+Used to create new database.
+
+Falls under:
+
+```text id="j4pnfu"
+DDL command
+```
+
+---
+
+# 17. CREATE TABLE
+
+## Purpose
+
+Used to define table structure.
+
+Includes:
+
+* column names
+* datatypes
+
+---
+
+# 18. INSERT Command
+
+## Purpose
+
+Used to add records into table.
+
+Falls under:
+
+```text id="8df9w4"
+DML command
+```
+
+---
+
+# 19. SELECT Query
+
+Most important SQL query.
+
+## Purpose
+
+Used to retrieve data from table.
+
+Falls under:
+
+```text id="c3ms99"
+DQL command
+```
+
+---
+
+# 20. WHERE Clause
+
+## Definition
+
+Used to filter records based on conditions.
+
+Example:
+
+```text id="8kh4lm"
+WHERE age > 20
+```
+
+---
+
+# 21. UPDATE Query
+
+## Purpose
+
+Used to modify existing records.
+
+---
+
+# 22. DELETE Query
+
+## Purpose
+
+Used to remove records from table.
+
+---
+
+# 23. Data Types in Database
+
+| Data Type | Meaning        |
+| --------- | -------------- |
+| INT       | Integer values |
+| FLOAT     | Decimal values |
+| VARCHAR   | Text/String    |
+| DATE      | Date values    |
+
+---
+
+# 24. What is Query Processing?
+
+## Definition
+
+Execution of SQL statements to retrieve or manipulate data.
+
+---
+
+# 25. Why SQL is Important in Data Science?
+
+## Viva Answer
+
+Because most real-world data is stored in relational databases and SQL is required to access and analyze it.
+
+---
+
+# 26. Difference Between SQL and Impala
+
+| SQL                          | Impala                 |
+| ---------------------------- | ---------------------- |
+| Query language               | Query engine           |
+| Used for database operations | Executes SQL on Hadoop |
+
+---
+
+# 27. Relational Database
+
+## Definition
+
+A database storing data in related tables.
+
+---
+
+# 28. Advantages of Database Systems
+
+## Viva Points
+
+* Data consistency
+* Fast retrieval
+* Reduced redundancy
+* Security
+* Efficient management
+
+---
+
+# 29. Applications of Impala
+
+Used in:
+
+* Big data analytics
+* Hadoop ecosystems
+* Real-time querying
+* Data warehousing
+
+---
+
+# 30. Important Viva Questions and Answers
+
+---
+
+## Q1. What is a database?
+
+An organized collection of related data.
+
+---
+
+## Q2. What is DBMS?
+
+Software used to manage databases.
+
+---
+
+## Q3. What is SQL?
+
+Language used for database operations.
+
+---
+
+## Q4. What is Impala?
+
+A fast SQL query engine for Hadoop.
+
+---
+
+## Q5. Difference between row and column?
+
+Row represents record while column represents attribute.
+
+---
+
+## Q6. What is primary key?
+
+A unique identifier for records.
+
+---
+
+## Q7. What is schema?
+
+Structure/design of database.
+
+---
+
+## Q8. Why is SQL important in Data Science?
+
+Because data is commonly stored in databases.
+
+---
+
+## Q9. Difference between SQL and Impala?
+
+SQL is language while Impala is execution engine.
+
+---
+
+# 31. Practical Flow
+
+```text id="rgx6wf"
+Create Database
+↓
+Create Table
+↓
+Define Columns and Datatypes
+↓
+Insert Records
+↓
+Run SELECT Queries
+↓
+Filter Data using WHERE
+↓
+Update/Delete Records
+↓
+Retrieve Required Information
+```
+
+---
+
+# 32. Conclusion of Practical 11
+
+## Viva Conclusion Answer
+
+In this practical, we learned how to create databases and tables using Impala, insert records, and execute SQL queries for data retrieval and manipulation. Impala provides fast query execution on Hadoop-based big data systems and is widely used in data analytics and big data environments. 

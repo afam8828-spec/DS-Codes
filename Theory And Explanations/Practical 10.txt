@@ -1,0 +1,365 @@
+# Practical 10: Data Visualization-III — Iris Dataset Visualization and Outlier Analysis
+
+## What We Are Doing in This Practical
+
+In this practical, we use the **Iris dataset** and perform visualization-based analysis by:
+
+* Identifying dataset features
+* Understanding feature types
+* Plotting histograms
+* Creating box plots
+* Comparing feature distributions
+* Detecting outliers 
+
+This practical is important because it teaches:
+
+* Feature analysis
+* Distribution comparison
+* Outlier detection using visualization
+* Statistical understanding of dataset
+
+---
+
+# 1. What is a Feature?
+
+Most important viva topic.
+
+## Definition
+
+A feature is an individual measurable property or characteristic of data.
+
+Examples in Iris dataset:
+
+* Sepal Length
+* Sepal Width
+* Petal Length
+* Petal Width
+
+---
+
+# 2. Types of Features
+
+According to the practical, features are categorized by datatype. 
+
+Main types:
+
+* Numerical
+* Categorical (Nominal)
+
+---
+
+# 3. Numerical Features
+
+## Definition
+
+Features containing measurable numeric values.
+
+Example:
+
+```text id="1n1yfy"
+Petal Length = 5.2
+```
+
+---
+
+# 4. Nominal Features
+
+## Definition
+
+Categorical features without any order.
+
+Example:
+
+```text id="v72m7r"
+Flower species names
+```
+
+---
+
+# 5. Iris Dataset
+
+This practical again uses the Iris dataset for visualization analysis.
+
+Main flower classes:
+
+* Iris-setosa
+* Iris-versicolor
+* Iris-virginica
+
+---
+
+# 6. Why Visualization is Performed Here?
+
+## Viva Answer
+
+Visualization helps compare feature distributions and identify patterns and outliers in the dataset.
+
+---
+
+# 7. Histogram in Iris Dataset
+
+Histograms are created for each feature. 
+
+Purpose:
+
+* understand distribution
+* analyze spread
+* observe skewness
+
+---
+
+# 8. What Histogram Shows?
+
+A histogram shows:
+
+* frequency distribution
+* concentration of values
+* shape of distribution
+
+---
+
+# 9. Feature Distribution
+
+## Definition
+
+Feature distribution describes how values of a feature are spread across dataset.
+
+---
+
+# 10. Symmetric Distribution
+
+## Definition
+
+Distribution where left and right sides are approximately equal.
+
+Characteristics:
+
+```text id="qv2v0j"
+Mean ≈ Median
+```
+
+---
+
+# 11. Skewed Distribution
+
+## Definition
+
+Asymmetrical distribution of data.
+
+Types:
+
+* Positive skew
+* Negative skew
+
+---
+
+# 12. Positive Skew
+
+Long tail on right side.
+
+```text id="q7oqcl"
+Few very large values
+```
+
+---
+
+# 13. Negative Skew
+
+Long tail on left side.
+
+```text id="2m08w1"
+Few very small values
+```
+
+---
+
+# 14. Why Compare Distributions?
+
+## Viva Answer
+
+Comparing distributions helps understand variability and differences among features.
+
+---
+
+# 15. Box Plot in Iris Dataset
+
+Box plots are used for each feature. 
+
+Purpose:
+
+* detect outliers
+* compare spread
+* analyze quartiles
+
+---
+
+# 16. Outlier Detection Using Box Plot
+
+Very important topic.
+
+Outliers appear:
+
+```text id="f72dfn"
+Outside whiskers
+```
+
+---
+
+# 17. Why Outliers Matter?
+
+## Viva Answer
+
+Outliers can affect:
+
+* statistical analysis
+* machine learning models
+* prediction accuracy
+
+---
+
+# 18. Variability in Features
+
+## Definition
+
+Variability indicates how much feature values differ from each other.
+
+---
+
+# 19. High vs Low Variability
+
+| Variability | Meaning                |
+| ----------- | ---------------------- |
+| High        | Values widely spread   |
+| Low         | Values closely grouped |
+
+---
+
+# 20. Comparing Histograms and Box Plots
+
+| Histogram                     | Box Plot                     |
+| ----------------------------- | ---------------------------- |
+| Shows frequency distribution  | Shows statistical summary    |
+| Better for distribution shape | Better for outlier detection |
+
+---
+
+# 21. Why Multiple Visualizations are Used?
+
+Because different plots reveal different insights:
+
+* histogram → distribution
+* box plot → spread and outliers
+
+---
+
+# 22. Exploratory Visualization
+
+## Definition
+
+Visualization performed before modeling to understand dataset characteristics.
+
+---
+
+# 23. Importance of Feature Analysis
+
+Feature analysis helps:
+
+* understand dataset
+* select useful variables
+* improve ML models
+
+---
+
+# 24. Applications of Visualization Analysis
+
+Used in:
+
+* Machine learning preprocessing
+* Statistical analysis
+* Healthcare analytics
+* Business intelligence
+* Scientific research
+
+---
+
+# 25. Important Viva Questions and Answers
+
+---
+
+## Q1. What is a feature?
+
+A measurable property or attribute of data.
+
+---
+
+## Q2. Difference between numerical and nominal feature?
+
+| Numerical      | Nominal         |
+| -------------- | --------------- |
+| Numeric values | Category labels |
+
+---
+
+## Q3. Why histograms are used?
+
+To understand frequency distribution of data.
+
+---
+
+## Q4. What is feature distribution?
+
+Spread of feature values across dataset.
+
+---
+
+## Q5. Why box plots are used?
+
+To analyze spread, quartiles, and outliers.
+
+---
+
+## Q6. How are outliers identified in box plot?
+
+As points outside whiskers.
+
+---
+
+## Q7. Why is outlier detection important?
+
+Because outliers can affect statistical and ML results.
+
+---
+
+## Q8. Difference between histogram and box plot?
+
+Histogram shows distribution while box plot shows statistical summary.
+
+---
+
+# 26. Practical Flow
+
+```text id="8b02h8"
+Load Iris Dataset
+↓
+Identify Features and Types
+↓
+Plot Histograms
+↓
+Analyze Feature Distributions
+↓
+Create Box Plots
+↓
+Compare Spread and Variability
+↓
+Detect Outliers
+↓
+Draw Inferences
+```
+
+---
+
+# 27. Conclusion of Practical 10
+
+## Viva Conclusion Answer
+
+In this practical, we analyzed the Iris dataset using histograms and box plots to study feature distributions, variability, and outliers. Visualization helped compare different numerical features and identify unusual observations in the dataset. Such exploratory analysis is important before applying machine learning models and statistical techniques. 

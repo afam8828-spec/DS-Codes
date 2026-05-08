@@ -1,0 +1,394 @@
+# Practical 5: Data Analytics-II — Logistic Regression and Performance Metrics
+
+## What We Are Doing in This Practical
+
+In this practical, we use the **Social_Network_Ads dataset** to perform **classification** using the **Logistic Regression algorithm**.
+The model predicts whether a user will purchase a product or not based on features like:
+
+* Age
+* Estimated Salary
+
+After prediction, we evaluate model performance using:
+
+* Confusion Matrix
+* Accuracy
+* Precision
+* Recall
+* Error Rate 
+
+This practical is important because it introduces:
+
+* Classification problems
+* Logistic Regression
+* Performance evaluation metrics
+
+---
+
+# 1. What is Classification?
+
+## Definition
+
+Classification is a supervised machine learning technique used to predict categorical outputs.
+
+Examples:
+
+* Spam / Not Spam
+* Purchased / Not Purchased
+* Disease / No Disease
+
+---
+
+# 2. Difference Between Regression and Classification
+
+| Regression                 | Classification      |
+| -------------------------- | ------------------- |
+| Predicts continuous values | Predicts categories |
+| Example: House price       | Example: Yes/No     |
+
+---
+
+# 3. What is Logistic Regression?
+
+Most important viva topic.
+
+## Definition
+
+Logistic Regression is a supervised machine learning algorithm used for binary classification problems. 
+
+---
+
+# 4. Why “Regression” Name if it Performs Classification?
+
+Because it uses a regression equation internally, but final output is converted into categories using probability.
+
+---
+
+# 5. Binary Classification
+
+## Definition
+
+Classification with only two possible outputs.
+
+Example:
+
+```text id="s3v2pz"
+0 → Not Purchased
+1 → Purchased
+```
+
+---
+
+# 6. Sigmoid Function
+
+Very important.
+
+## Definition
+
+Sigmoid function converts any value into probability between 0 and 1. 
+
+Formula:
+
+\sigma(z)=\frac{1}{1+e^{-z}}
+
+---
+
+# 7. Why Sigmoid Function is Used?
+
+## Viva Answer
+
+Because classification requires probability values between 0 and 1.
+
+---
+
+# 8. Decision Boundary
+
+## Definition
+
+A boundary separating different classes.
+
+Example:
+
+```text id="8p4d2p"
+Purchased | Not Purchased
+```
+
+Logistic Regression tries to find best decision boundary.
+
+---
+
+# 9. Feature Scaling
+
+Important topic.
+
+## Definition
+
+Feature scaling standardizes numerical values to similar range.
+
+The manual uses StandardScaler. 
+
+---
+
+# 10. Why Feature Scaling is Needed?
+
+## Viva Answer
+
+Because features with large values can dominate smaller features and reduce model performance.
+
+---
+
+# 11. Standardization
+
+## Definition
+
+A scaling technique where:
+
+* Mean = 0
+* Standard deviation = 1
+
+Formula:
+
+genui{"math_block_widget_always_prefetch_v2":{"content":"z = \frac{x-\mu}{\sigma}"}}
+
+---
+
+# 12. What is Confusion Matrix?
+
+Most important viva topic.
+
+## Definition
+
+A confusion matrix is a table used to evaluate classification model performance. 
+
+---
+
+# 13. Components of Confusion Matrix
+
+| Term | Meaning                     |
+| ---- | --------------------------- |
+| TP   | Correct positive prediction |
+| TN   | Correct negative prediction |
+| FP   | Wrong positive prediction   |
+| FN   | Wrong negative prediction   |
+
+---
+
+# 14. True Positive (TP)
+
+Model correctly predicts positive class.
+
+Example:
+
+```text id="jpr7hm"
+Actually Purchased → Predicted Purchased
+```
+
+---
+
+# 15. True Negative (TN)
+
+Model correctly predicts negative class.
+
+---
+
+# 16. False Positive (FP)
+
+Model predicts positive incorrectly.
+
+Also called:
+
+```text id="b7l0yk"
+Type-I Error
+```
+
+---
+
+# 17. False Negative (FN)
+
+Model predicts negative incorrectly.
+
+Also called:
+
+```text id="e7ejm8"
+Type-II Error
+```
+
+---
+
+# 18. Accuracy
+
+Most common metric.
+
+## Definition
+
+Accuracy measures proportion of correct predictions.
+
+Formula:
+
+Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
+
+---
+
+# 19. Precision
+
+## Definition
+
+Precision measures how many predicted positive cases are actually positive.
+
+Formula:
+
+Precision = \frac{TP}{TP+FP}
+
+---
+
+# 20. Recall (Sensitivity)
+
+## Definition
+
+Recall measures how many actual positive cases are correctly identified.
+
+Formula:
+
+Recall = \frac{TP}{TP+FN}
+
+---
+
+# 21. Error Rate
+
+## Definition
+
+Error rate measures proportion of incorrect predictions.
+
+Formula:
+
+Error\ Rate = \frac{FP+FN}{TP+TN+FP+FN}
+
+---
+
+# 22. Difference Between Precision and Recall
+
+| Precision                      | Recall                      |
+| ------------------------------ | --------------------------- |
+| Focuses on predicted positives | Focuses on actual positives |
+| Important when FP costly       | Important when FN costly    |
+
+---
+
+# 23. Social Network Ads Dataset
+
+Dataset contains:
+
+* User Age
+* Estimated Salary
+* Purchased status
+
+Goal:
+Predict whether user purchases product.
+
+---
+
+# 24. Why Logistic Regression is Popular?
+
+## Viva Answer
+
+Because it is:
+
+* simple
+* fast
+* interpretable
+* effective for binary classification
+
+---
+
+# 25. Applications of Logistic Regression
+
+Used in:
+
+* Spam detection
+* Fraud detection
+* Disease prediction
+* Customer purchase prediction
+* Credit approval systems
+
+---
+
+# 26. Important Viva Questions and Answers
+
+---
+
+## Q1. What is Logistic Regression?
+
+A supervised ML algorithm used for binary classification.
+
+---
+
+## Q2. Difference between Linear and Logistic Regression?
+
+| Linear Regression          | Logistic Regression |
+| -------------------------- | ------------------- |
+| Predicts continuous values | Predicts categories |
+
+---
+
+## Q3. What is sigmoid function?
+
+A function converting values into probabilities between 0 and 1.
+
+---
+
+## Q4. What is confusion matrix?
+
+A table used to evaluate classification performance.
+
+---
+
+## Q5. What is accuracy?
+
+Ratio of correct predictions to total predictions.
+
+---
+
+## Q6. What is precision?
+
+Ratio of correctly predicted positive observations.
+
+---
+
+## Q7. What is recall?
+
+Ratio of actual positives correctly predicted.
+
+---
+
+## Q8. What is feature scaling?
+
+Process of bringing features into similar range.
+
+---
+
+# 27. Practical Flow
+
+```text id="6ibv2r"
+Load Dataset
+↓
+Split Features and Target
+↓
+Apply Feature Scaling
+↓
+Train Logistic Regression Model
+↓
+Predict Test Data
+↓
+Generate Confusion Matrix
+↓
+Calculate Accuracy, Precision, Recall
+↓
+Evaluate Model
+```
+
+---
+
+# 28. Conclusion of Practical 5
+
+## Viva Conclusion Answer
+
+In this practical, we implemented Logistic Regression for binary classification using the Social_Network_Ads dataset. We trained the model, predicted user purchase behavior, and evaluated performance using confusion matrix, accuracy, precision, recall, and error rate. Logistic Regression is an important classification algorithm widely used in machine learning applications. 

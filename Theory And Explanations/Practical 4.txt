@@ -1,0 +1,625 @@
+# Practical 4: Data Analytics-I — Linear Regression using Boston Housing Dataset
+
+According to the manual, this practical focuses on creating a **Linear Regression model** to predict house prices using the Boston Housing Dataset. 
+
+This is one of the most important practicals because it introduces:
+
+* Machine Learning basics
+* Regression
+* Prediction models
+* Model evaluation
+* Feature-target relationship
+
+In viva, examiners usually ask:
+
+* What is regression?
+* What is Linear Regression?
+* Difference between regression and classification
+* What is dependent variable?
+* What are features?
+* What is train-test split?
+* What is MSE?
+* What is R² score?
+* What is overfitting?
+
+This practical is extremely important because Linear Regression is the foundation of predictive analytics and ML.
+
+---
+
+# 1. What is Data Analytics?
+
+## Definition
+
+Data analytics is the process of examining data to discover useful information, patterns, and predictions.
+
+---
+
+# 2. What is Machine Learning?
+
+## Definition
+
+Machine Learning is a branch of AI where systems learn patterns from data and make predictions without being explicitly programmed.
+
+---
+
+# 3. Types of Machine Learning
+
+| Type                   | Purpose                  |
+| ---------------------- | ------------------------ |
+| Supervised Learning    | Uses labeled data        |
+| Unsupervised Learning  | Uses unlabeled data      |
+| Reinforcement Learning | Learning through rewards |
+
+---
+
+# 4. What is Supervised Learning?
+
+## Definition
+
+Supervised learning is a machine learning technique where the model learns using input-output labeled data.
+
+Example:
+
+```text id="6lo9y8"
+Input → House Features
+Output → House Price
+```
+
+---
+
+# 5. What is Regression?
+
+Most important viva topic.
+
+## Definition
+
+Regression is a supervised learning technique used to predict continuous numerical values.
+
+Examples:
+
+* House price prediction
+* Salary prediction
+* Temperature forecasting
+
+---
+
+# 6. What is Linear Regression?
+
+## Definition
+
+Linear Regression is a statistical and machine learning algorithm used to model the linear relationship between independent variables and dependent variable. 
+
+---
+
+# 7. Simple Meaning of Linear Regression
+
+It tries to fit a straight line through data points for prediction.
+
+Example:
+
+```text id="wz5d2e"
+More rooms → Higher house price
+```
+
+---
+
+# 8. Linear Regression Equation
+
+Most important formula.
+
+genui{"math_block_widget_always_prefetch_v2":{"content":"y = mx + b"}}
+
+Where:
+
+* y = dependent variable
+* x = independent variable
+* m = slope
+* b = intercept
+
+---
+
+# 9. Multiple Linear Regression
+
+Boston Housing uses multiple features.
+
+Equation:
+
+y = b_0 + b_1x_1 + b_2x_2 + \cdots + b_nx_n
+
+---
+
+# 10. Independent Variable (Feature)
+
+## Definition
+
+Independent variables are input features used for prediction.
+
+Examples from Boston dataset:
+
+* Number of rooms
+* Crime rate
+* Tax rate
+* Distance from employment centers
+
+---
+
+# 11. Dependent Variable (Target)
+
+## Definition
+
+Dependent variable is the output we want to predict.
+
+In this practical:
+
+```text id="rtmbzz"
+MEDV → House Price
+```
+
+---
+
+# 12. Boston Housing Dataset
+
+Very important viva topic.
+
+## Definition
+
+A famous machine learning dataset containing information about houses in Boston. 
+
+---
+
+# 13. Important Features in Dataset
+
+According to manual: 
+
+| Feature | Meaning                        |
+| ------- | ------------------------------ |
+| CRIM    | Crime rate                     |
+| RM      | Number of rooms                |
+| AGE     | Age of property                |
+| DIS     | Distance to employment centers |
+| TAX     | Property tax                   |
+| PTRATIO | Student-teacher ratio          |
+| LSTAT   | Lower status population        |
+| MEDV    | House price                    |
+
+---
+
+# 14. What is Relationship Between Variables?
+
+Linear Regression studies relationship between:
+
+* independent variables
+* dependent variable
+
+Example:
+
+```text id="rz11yb"
+More rooms → More house price
+```
+
+---
+
+# 15. Assumptions of Linear Regression
+
+Very important.
+
+---
+
+## A) Linear Relationship
+
+Features and target should have linear relationship.
+
+---
+
+## B) Independence
+
+Observations should be independent.
+
+---
+
+## C) Normal Distribution of Errors
+
+Residuals should be normally distributed.
+
+---
+
+## D) No Multicollinearity
+
+Features should not be highly correlated with each other.
+
+---
+
+# 16. What is Correlation?
+
+## Definition
+
+Correlation measures strength and direction of relationship between variables.
+
+---
+
+# 17. Correlation Range
+
+-1 \leq r \leq 1
+
+| Correlation | Meaning          |
+| ----------- | ---------------- |
+| +1          | Perfect positive |
+| -1          | Perfect negative |
+| 0           | No relation      |
+
+---
+
+# 18. Heatmap
+
+The manual uses heatmap for correlation visualization. 
+
+## Definition
+
+Heatmap is a graphical representation of correlation values using colors.
+
+---
+
+# 19. Positive Correlation
+
+## Definition
+
+When one variable increases, the other also increases.
+
+Example:
+
+```text id="k24g9v"
+Rooms ↑ → Price ↑
+```
+
+---
+
+# 20. Negative Correlation
+
+## Definition
+
+When one variable increases, the other decreases.
+
+Example:
+
+```text id="1gk6mx"
+Crime ↑ → Price ↓
+```
+
+---
+
+# 21. What is Model Training?
+
+## Definition
+
+Training means teaching the ML model using historical data.
+
+---
+
+# 22. What is Train-Test Split?
+
+Very important viva question.
+
+## Definition
+
+Dataset is divided into:
+
+* training data
+* testing data
+
+Manual uses:
+
+```text id="3ezn7v"
+80% Training
+20% Testing
+```
+
+
+
+---
+
+# 23. Why Train-Test Split is Needed?
+
+## Viva Answer
+
+To evaluate model performance on unseen data.
+
+---
+
+# 24. Training Dataset
+
+Used to:
+
+* learn patterns
+* train model
+
+---
+
+# 25. Testing Dataset
+
+Used to:
+
+* evaluate model accuracy
+* check prediction capability
+
+---
+
+# 26. What is Prediction?
+
+## Definition
+
+Prediction means estimating unknown output using trained model.
+
+Example:
+
+```text id="n56sz0"
+Predicting house price for new house
+```
+
+---
+
+# 27. What are Residuals (Errors)?
+
+## Definition
+
+Difference between actual value and predicted value.
+
+Formula:
+
+Residual = Actual - Predicted
+
+---
+
+# 28. What is Model Evaluation?
+
+## Definition
+
+Model evaluation measures how well the machine learning model performs.
+
+---
+
+# 29. Mean Squared Error (MSE)
+
+Most important viva topic.
+
+## Definition
+
+MSE measures average squared difference between actual and predicted values. 
+
+---
+
+# 30. MSE Formula
+
+MSE = \frac{1}{n}\sum (y_i - \hat{y_i})^2
+
+---
+
+# 31. Interpretation of MSE
+
+| MSE Value | Meaning          |
+| --------- | ---------------- |
+| Low       | Better model     |
+| High      | Poor predictions |
+
+---
+
+# 32. Why Squaring is Used in MSE?
+
+## Viva Answer
+
+Squaring:
+
+* removes negative signs
+* penalizes large errors more strongly
+
+---
+
+# 33. What is R² Score?
+
+Another very important topic.
+
+## Definition
+
+R² score measures how well the model explains variance in target variable. 
+
+---
+
+# 34. R² Formula
+
+R^2 = 1 - \frac{SS_{res}}{SS_{tot}}
+
+---
+
+# 35. Interpretation of R²
+
+| R² Value | Meaning     |
+| -------- | ----------- |
+| 1        | Perfect fit |
+| 0        | Poor model  |
+
+---
+
+# 36. Difference Between MSE and R²
+
+| MSE             | R²                       |
+| --------------- | ------------------------ |
+| Measures error  | Measures goodness of fit |
+| Lower is better | Higher is better         |
+
+---
+
+# 37. What is Overfitting?
+
+Very important viva question.
+
+## Definition
+
+Overfitting occurs when model learns training data too perfectly and fails on new data.
+
+---
+
+# 38. What is Underfitting?
+
+## Definition
+
+Underfitting occurs when model fails to learn important patterns from data.
+
+---
+
+# 39. Difference Between Overfitting and Underfitting
+
+| Overfitting              | Underfitting             |
+| ------------------------ | ------------------------ |
+| High training accuracy   | Poor training accuracy   |
+| Poor testing performance | Poor overall performance |
+| Learns noise             | Learns too little        |
+
+---
+
+# 40. Visualization of Predictions
+
+The manual compares actual vs predicted prices using scatter plot. 
+
+## Purpose
+
+To visually check model performance.
+
+---
+
+# 41. Scatter Plot
+
+## Definition
+
+Scatter plot shows relationship between two numerical variables.
+
+---
+
+# 42. Best Fit Line
+
+## Definition
+
+The regression line minimizing prediction error.
+
+---
+
+# 43. Why Linear Regression is Popular?
+
+## Viva Answer
+
+Because it is:
+
+* simple
+* interpretable
+* fast
+* effective for linear relationships
+
+---
+
+# 44. Applications of Linear Regression
+
+Used in:
+
+* Real estate price prediction
+* Sales forecasting
+* Weather forecasting
+* Financial analysis
+* Business analytics
+
+---
+
+# 45. Important Viva Questions and Answers
+
+---
+
+## Q1. What is regression?
+
+Regression predicts continuous numerical values.
+
+---
+
+## Q2. What is Linear Regression?
+
+Linear Regression models linear relationship between variables.
+
+---
+
+## Q3. Difference between regression and classification?
+
+| Regression                 | Classification      |
+| -------------------------- | ------------------- |
+| Predicts continuous values | Predicts categories |
+
+---
+
+## Q4. What is dependent variable?
+
+The target/output variable to be predicted.
+
+---
+
+## Q5. What is train-test split?
+
+Dividing dataset into training and testing subsets.
+
+---
+
+## Q6. What is MSE?
+
+Mean Squared Error measures prediction error.
+
+---
+
+## Q7. What is R² score?
+
+R² measures goodness of fit of regression model.
+
+---
+
+## Q8. What is overfitting?
+
+When model memorizes training data and performs poorly on new data.
+
+---
+
+## Q9. Why is Linear Regression called “linear”?
+
+Because relationship between variables is represented using straight line equation.
+
+---
+
+## Q10. What are residuals?
+
+Difference between actual and predicted values.
+
+---
+
+# 46. Practical Flow
+
+```text id="mgvzwq"
+Load Dataset
+↓
+Explore Features
+↓
+Check Correlation
+↓
+Split Dataset
+↓
+Train Linear Regression Model
+↓
+Predict Test Data
+↓
+Calculate MSE
+↓
+Calculate R² Score
+↓
+Visualize Predictions
+↓
+Evaluate Model
+```
+
+---
+
+# 47. Conclusion of Practical 4
+
+## Viva Conclusion Answer
+
+In this practical, we implemented a Linear Regression model using the Boston Housing Dataset to predict house prices. We analyzed relationships between features and target variable, trained the model using training data, predicted prices on test data, and evaluated performance using MSE and R² score. Linear Regression is an important supervised learning algorithm used for predictive analytics. 

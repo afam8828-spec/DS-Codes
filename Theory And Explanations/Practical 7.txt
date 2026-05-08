@@ -1,0 +1,434 @@
+# Practical 7: Text Analytics — Document Preprocessing and TF-IDF
+
+## What We Are Doing in This Practical
+
+In this practical, we perform **text preprocessing** on a sample document using NLP (Natural Language Processing) techniques such as:
+
+* Tokenization
+* POS Tagging
+* Stop Words Removal
+* Stemming
+* Lemmatization
+
+After preprocessing, we calculate:
+
+* Term Frequency (TF)
+* Inverse Document Frequency (IDF)
+* TF-IDF representation of text 
+
+This practical is important because it introduces:
+
+* Natural Language Processing (NLP)
+* Text cleaning
+* Text representation for ML models
+
+---
+
+# 1. What is Text Analytics?
+
+## Definition
+
+Text analytics is the process of extracting meaningful information from unstructured text data using NLP techniques. 
+
+---
+
+# 2. What is NLP (Natural Language Processing)?
+
+## Definition
+
+NLP is a branch of Artificial Intelligence that enables computers to understand, process, and analyze human language.
+
+---
+
+# 3. What is Unstructured Data?
+
+## Definition
+
+Data without fixed format or table structure.
+
+Examples:
+
+* Emails
+* Social media posts
+* Reviews
+* Articles
+* Chats
+
+---
+
+# 4. Why Text Preprocessing is Needed?
+
+Most important viva topic.
+
+## Viva Answer
+
+Raw text contains unnecessary words, symbols, and inconsistencies. Preprocessing cleans and converts text into useful format for machine learning and analysis.
+
+---
+
+# 5. What is Tokenization?
+
+Most asked question.
+
+## Definition
+
+Tokenization is the process of splitting text into smaller units called tokens. 
+
+---
+
+## Example
+
+```text id="vpkjcm"
+Input:
+"Text analytics is fun"
+
+Output:
+["Text", "analytics", "is", "fun"]
+```
+
+---
+
+# 6. What are Tokens?
+
+## Definition
+
+Tokens are individual words, symbols, or subwords extracted from text.
+
+---
+
+# 7. What is POS Tagging?
+
+Important topic.
+
+## Definition
+
+POS (Part-of-Speech) tagging identifies grammatical category of each word. 
+
+---
+
+## Examples of POS Tags
+
+| Tag | Meaning   |
+| --- | --------- |
+| NN  | Noun      |
+| VB  | Verb      |
+| JJ  | Adjective |
+
+---
+
+# 8. Why POS Tagging is Used?
+
+## Viva Answer
+
+To understand grammatical structure and meaning of sentence.
+
+---
+
+# 9. What are Stop Words?
+
+## Definition
+
+Stop words are common words that carry little useful meaning in analysis.
+
+Examples:
+
+```text id="u7h1q8"
+is, the, a, an, in
+```
+
+---
+
+# 10. Stop Words Removal
+
+## Definition
+
+Removing unnecessary common words from text.
+
+---
+
+# 11. Why Remove Stop Words?
+
+## Viva Answer
+
+Because they increase noise and do not contribute much meaning to analysis.
+
+---
+
+# 12. What is Stemming?
+
+Very important viva topic.
+
+## Definition
+
+Stemming reduces words to root form, which may not always be a valid dictionary word. 
+
+---
+
+## Example
+
+```text id="c6ol3z"
+running → run
+playing → play
+```
+
+---
+
+# 13. What is Lemmatization?
+
+## Definition
+
+Lemmatization reduces words to meaningful root words using vocabulary and grammar rules. 
+
+---
+
+## Example
+
+```text id="sgcr6f"
+better → good
+running → run
+```
+
+---
+
+# 14. Difference Between Stemming and Lemmatization
+
+| Stemming                  | Lemmatization               |
+| ------------------------- | --------------------------- |
+| Faster                    | More accurate               |
+| May produce invalid words | Produces meaningful words   |
+| Rule-based cutting        | Uses vocabulary and grammar |
+
+---
+
+# 15. What is Corpus?
+
+## Definition
+
+A corpus is a collection of documents or text data.
+
+---
+
+# 16. What is Vectorization?
+
+## Definition
+
+Converting text into numerical representation for machine learning.
+
+---
+
+# 17. What is Term Frequency (TF)?
+
+Most important viva topic.
+
+## Definition
+
+Term Frequency measures how frequently a word appears in a document. 
+
+Formula:
+
+TF(t)=\frac{\text{Count of term }t}{\text{Total terms in document}}
+
+---
+
+# 18. What is Inverse Document Frequency (IDF)?
+
+## Definition
+
+IDF measures importance of a word across all documents. 
+
+Rare words get:
+
+```text id="p9tx4t"
+Higher IDF
+```
+
+Common words get:
+
+```text id="0z9vgr"
+Lower IDF
+```
+
+---
+
+# 19. IDF Formula
+
+IDF(t)=\log\left(\frac{\text{Total Documents}}{\text{Documents containing term }t}\right)
+
+---
+
+# 20. What is TF-IDF?
+
+Most important concept.
+
+## Definition
+
+TF-IDF measures importance of a word in a document relative to entire corpus. 
+
+Formula:
+
+TF\text{-}IDF(t)=TF(t)\times IDF(t)
+
+---
+
+# 21. Why TF-IDF is Important?
+
+## Viva Answer
+
+TF-IDF helps identify important words while reducing impact of common words.
+
+---
+
+# 22. What is Feature Extraction in NLP?
+
+## Definition
+
+Converting textual information into numerical features usable by ML algorithms.
+
+TF-IDF is one such feature extraction technique.
+
+---
+
+# 23. What is Text Cleaning?
+
+Includes:
+
+* lowercase conversion
+* punctuation removal
+* stop word removal
+* stemming
+* lemmatization
+
+---
+
+# 24. Why NLP is Important?
+
+## Viva Answer
+
+NLP enables computers to process human language and extract useful information from text data.
+
+---
+
+# 25. Applications of Text Analytics
+
+Used in:
+
+* Chatbots
+* Sentiment analysis
+* Spam filtering
+* Search engines
+* Recommendation systems
+* Voice assistants
+
+---
+
+# 26. NLTK Library
+
+Important viva point.
+
+## Definition
+
+NLTK (Natural Language Toolkit) is a Python library used for NLP and text preprocessing.
+
+---
+
+# 27. TfidfVectorizer
+
+## Definition
+
+A Scikit-learn tool used to calculate TF-IDF values automatically.
+
+---
+
+# 28. Important Viva Questions and Answers
+
+---
+
+## Q1. What is text analytics?
+
+Process of extracting useful information from text data.
+
+---
+
+## Q2. What is tokenization?
+
+Splitting text into smaller units called tokens.
+
+---
+
+## Q3. What are stop words?
+
+Common words with little analytical importance.
+
+---
+
+## Q4. What is stemming?
+
+Reducing words to root form using simple rules.
+
+---
+
+## Q5. What is lemmatization?
+
+Reducing words to meaningful dictionary root words.
+
+---
+
+## Q6. Difference between stemming and lemmatization?
+
+Stemming may produce invalid roots while lemmatization produces meaningful words.
+
+---
+
+## Q7. What is TF?
+
+Frequency of a term within document.
+
+---
+
+## Q8. What is IDF?
+
+Measure of importance of word across corpus.
+
+---
+
+## Q9. What is TF-IDF?
+
+A metric combining TF and IDF to represent importance of words.
+
+---
+
+## Q10. Why is preprocessing needed in NLP?
+
+To clean text and improve machine learning performance.
+
+---
+
+# 29. Practical Flow
+
+```text id="sjjlwm"
+Input Document
+↓
+Tokenization
+↓
+POS Tagging
+↓
+Stop Words Removal
+↓
+Stemming
+↓
+Lemmatization
+↓
+Calculate TF
+↓
+Calculate IDF
+↓
+Generate TF-IDF Matrix
+```
+
+---
+
+# 30. Conclusion of Practical 7
+
+## Viva Conclusion Answer
+
+In this practical, we applied NLP preprocessing techniques such as tokenization, POS tagging, stop words removal, stemming, and lemmatization on textual data. We also calculated TF, IDF, and TF-IDF values to numerically represent the importance of words in documents. These preprocessing and vectorization techniques are fundamental in text analytics and natural language processing applications. 

@@ -1,0 +1,608 @@
+# Practical 3: Descriptive Statistics — Measures of Central Tendency and Variability
+
+According to the manual, this practical uses the Iris dataset to calculate:
+
+* Mean
+* Standard deviation
+* Percentiles
+* Statistical summaries
+* Species-wise analysis of Iris flowers 
+
+This practical is one of the most theory-heavy practicals because it focuses on **statistics fundamentals**, which are the base of:
+
+* Data Science
+* Machine Learning
+* AI
+* Data Analytics
+
+In viva, examiners mainly ask:
+
+* Measures of central tendency
+* Measures of variability
+* Mean vs Median
+* Variance vs Standard deviation
+* Percentiles and quartiles
+* Iris dataset
+* Distribution concepts
+
+---
+
+# 1. What is Descriptive Statistics?
+
+## Definition
+
+Descriptive statistics is the branch of statistics used to summarize, organize, and describe the important characteristics of a dataset. 
+
+## Simple Meaning
+
+Instead of observing thousands of data values individually, descriptive statistics gives a compact summary using numbers and graphs.
+
+---
+
+# 2. Types of Descriptive Statistics
+
+According to the manual, there are two main types: 
+
+1. Measures of Central Tendency
+2. Measures of Variability (Spread)
+
+---
+
+# 3. Measures of Central Tendency
+
+## Definition
+
+These measures describe the center or typical value of a dataset.
+
+Main measures:
+
+* Mean
+* Median
+* Mode
+
+---
+
+# 4. Mean
+
+Most important concept.
+
+## Definition
+
+Mean is the average of all observations.
+
+Formula:
+
+\bar{x} = \frac{\sum x}{n}
+
+Where:
+
+* Σx = sum of all values
+* n = total number of observations
+
+---
+
+## Example
+
+```text id="h2v4xh"
+Marks = 70, 80, 90
+Mean = (70+80+90)/3 = 80
+```
+
+---
+
+## Advantages of Mean
+
+* Easy to calculate
+* Uses all observations
+* Widely used in ML/statistics
+
+---
+
+## Disadvantages of Mean
+
+* Affected by outliers
+* Not suitable for skewed data
+
+---
+
+# 5. Median
+
+## Definition
+
+Median is the middle value after arranging data in ascending order.
+
+---
+
+## Example
+
+```text id="6j3y0w"
+2, 4, 6, 8, 10
+Median = 6
+```
+
+---
+
+## Important Property
+
+Median is less affected by outliers.
+
+---
+
+# 6. Mean vs Median
+
+| Mean                         | Median                |
+| ---------------------------- | --------------------- |
+| Arithmetic average           | Middle value          |
+| Sensitive to outliers        | Resistant to outliers |
+| Best for normal distribution | Best for skewed data  |
+
+---
+
+# 7. Mode
+
+## Definition
+
+Mode is the most frequently occurring value in dataset.
+
+---
+
+## Example
+
+```text id="9z9v65"
+2, 3, 3, 4, 5
+Mode = 3
+```
+
+---
+
+# 8. Measures of Variability (Spread)
+
+## Definition
+
+These measures show how much data values are spread out from the center.
+
+Main measures:
+
+* Range
+* Variance
+* Standard Deviation
+* Quartiles
+* Percentiles
+
+---
+
+# 9. Range
+
+## Definition
+
+Difference between maximum and minimum value.
+
+Formula:
+
+Range = Maximum - Minimum
+
+---
+
+## Example
+
+```text id="16pv9g"
+Max = 100
+Min = 40
+Range = 60
+```
+
+---
+
+# 10. Variance
+
+Very important viva topic.
+
+## Definition
+
+Variance measures how far data points are spread from the mean.
+
+Small variance:
+→ data points close to mean
+
+Large variance:
+→ data points widely spread
+
+---
+
+## Formula
+
+\sigma^2 = \frac{\sum (x - \mu)^2}{N}
+
+---
+
+# 11. Standard Deviation
+
+Most asked viva question.
+
+## Definition
+
+Standard deviation measures average deviation from mean.
+
+It is the square root of variance.
+
+---
+
+## Formula
+
+\sigma = \sqrt{\frac{\sum (x - \mu)^2}{N}}
+
+---
+
+## Interpretation
+
+| Standard Deviation | Meaning            |
+| ------------------ | ------------------ |
+| Low                | Data close to mean |
+| High               | Data highly spread |
+
+---
+
+# 12. Why Standard Deviation is Important?
+
+## Viva Answer
+
+It helps understand consistency and variability in data.
+
+Used heavily in:
+
+* ML
+* finance
+* analytics
+* quality control
+
+---
+
+# 13. Difference Between Variance and Standard Deviation
+
+| Variance             | Standard Deviation      |
+| -------------------- | ----------------------- |
+| Square of deviations | Square root of variance |
+| Unit squared         | Original unit           |
+| Harder to interpret  | Easier to interpret     |
+
+---
+
+# 14. Percentiles
+
+Important topic.
+
+## Definition
+
+Percentiles divide data into 100 equal parts.
+
+Example:
+
+* 25th percentile → 25% data below it
+* 90th percentile → 90% data below it
+
+Manual calculates percentiles using NumPy. 
+
+---
+
+# 15. Quartiles
+
+## Definition
+
+Quartiles divide data into four equal parts.
+
+| Quartile | Meaning         |
+| -------- | --------------- |
+| Q1       | 25th percentile |
+| Q2       | Median          |
+| Q3       | 75th percentile |
+
+---
+
+# 16. Why Percentiles are Important?
+
+## Viva Points
+
+* understand distribution
+* detect outliers
+* compare relative positions
+* statistical analysis
+
+---
+
+# 17. Minimum and Maximum
+
+## Minimum
+
+Smallest value in dataset.
+
+## Maximum
+
+Largest value in dataset.
+
+These help understand data range.
+
+---
+
+# 18. Count
+
+## Definition
+
+Total number of observations in dataset.
+
+Example:
+
+```text id="v62gmv"
+count = 150
+```
+
+means dataset has 150 records.
+
+---
+
+# 19. What is Distribution?
+
+## Definition
+
+Distribution describes how data values are spread across dataset.
+
+---
+
+# 20. Types of Distribution
+
+---
+
+## Symmetric Distribution
+
+Equal spread on both sides.
+
+Mean ≈ Median
+
+---
+
+## Positively Skewed Distribution
+
+Right tail longer.
+
+Mean > Median
+
+---
+
+## Negatively Skewed Distribution
+
+Left tail longer.
+
+Mean < Median
+
+---
+
+# 21. What is Iris Dataset?
+
+Very important viva topic.
+
+## Definition
+
+Iris dataset is a famous machine learning dataset containing measurements of iris flowers.
+
+The manual uses three flower species: 
+
+* Iris-setosa
+* Iris-versicolor
+* Iris-virginica
+
+---
+
+# 22. Features of Iris Dataset
+
+The dataset contains:
+
+| Feature      | Meaning         |
+| ------------ | --------------- |
+| Sepal Length | Length of sepal |
+| Sepal Width  | Width of sepal  |
+| Petal Length | Length of petal |
+| Petal Width  | Width of petal  |
+
+---
+
+# 23. Why Iris Dataset is Popular?
+
+## Viva Answer
+
+Because:
+
+* simple and clean dataset
+* ideal for beginners
+* widely used in ML/statistics
+* useful for classification problems
+
+---
+
+# 24. Species Filtering
+
+The manual separates dataset species-wise. 
+
+## Why?
+
+To analyze statistics independently for each flower species.
+
+---
+
+# 25. What is Statistical Summary?
+
+## Definition
+
+A statistical summary gives compact information about dataset including:
+
+* mean
+* standard deviation
+* minimum
+* maximum
+* percentiles
+
+---
+
+# 26. Why Visualization is Used?
+
+The manual uses histogram visualization. 
+
+## Purpose
+
+Visualization helps:
+
+* understand distribution
+* identify skewness
+* detect outliers
+* compare features
+
+---
+
+# 27. Histogram
+
+## Definition
+
+Histogram is a graph showing frequency distribution of continuous data.
+
+---
+
+## Uses
+
+* understand distribution
+* identify spread
+* detect skewness
+
+---
+
+# 28. KDE (Kernel Density Estimate)
+
+Mentioned in manual with histogram. 
+
+## Definition
+
+KDE is a smooth curve representing probability density of data distribution.
+
+---
+
+# 29. Why Descriptive Statistics is Important?
+
+## Viva Answer
+
+Descriptive statistics helps summarize large datasets and provides insights before applying machine learning algorithms.
+
+---
+
+# 30. Importance in Machine Learning
+
+Statistics is used for:
+
+* feature analysis
+* preprocessing
+* normalization
+* anomaly detection
+* model evaluation
+
+---
+
+# 31. Important Viva Questions and Answers
+
+---
+
+## Q1. What is descriptive statistics?
+
+Descriptive statistics summarizes and describes the important characteristics of data.
+
+---
+
+## Q2. What are measures of central tendency?
+
+Measures that describe the center of data such as mean, median, and mode.
+
+---
+
+## Q3. What is mean?
+
+Mean is the arithmetic average of dataset.
+
+---
+
+## Q4. Difference between mean and median?
+
+Mean is average while median is middle value.
+
+---
+
+## Q5. What is variance?
+
+Variance measures spread of data from mean.
+
+---
+
+## Q6. What is standard deviation?
+
+Standard deviation measures average deviation from mean.
+
+---
+
+## Q7. What are percentiles?
+
+Percentiles divide data into 100 equal parts.
+
+---
+
+## Q8. What are quartiles?
+
+Quartiles divide data into four equal parts.
+
+---
+
+## Q9. Why is standard deviation important?
+
+It measures variability and consistency of data.
+
+---
+
+## Q10. Why is Iris dataset famous?
+
+Because it is simple, clean, and widely used for machine learning education.
+
+---
+
+# 32. Practical Flow
+
+```text id="gfgw6l"
+Load Iris Dataset
+↓
+Separate Species
+↓
+Calculate Mean
+↓
+Calculate Standard Deviation
+↓
+Calculate Percentiles
+↓
+Analyze Distribution
+↓
+Visualize using Histogram
+↓
+Interpret Statistical Results
+```
+
+---
+
+# 33. Real-World Applications
+
+Descriptive statistics is used in:
+
+* Healthcare analytics
+* Business intelligence
+* Sports analytics
+* Financial analysis
+* AI model preprocessing
+* Research analysis
+
+---
+
+# 34. Conclusion of Practical 3
+
+## Viva Conclusion Answer
+
+In this practical, we used the Iris dataset to calculate descriptive statistical measures such as mean, standard deviation, percentiles, minimum, and maximum values for different flower species. These measures helped in understanding the distribution, variability, and characteristics of the dataset. Descriptive statistics forms the foundation of data analysis and machine learning. 

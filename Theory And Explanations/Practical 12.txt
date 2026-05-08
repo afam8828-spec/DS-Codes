@@ -1,0 +1,396 @@
+# Practical 12: Simple Program in SCALA using Apache Spark Framework
+
+## What We Are Doing in This Practical
+
+In this practical, we write a simple program using:
+
+* SCALA programming language
+* Apache Spark framework
+
+The goal is to understand:
+
+* Big Data processing
+* Distributed computing
+* Spark architecture
+* Basic Spark programming 
+
+This practical is important because Apache Spark is one of the most widely used Big Data technologies in industry.
+
+---
+
+# 1. What is Big Data?
+
+Most important viva topic.
+
+## Definition
+
+Big Data refers to extremely large and complex datasets that cannot be processed efficiently using traditional systems.
+
+---
+
+# 2. Characteristics of Big Data (5Vs)
+
+| V        | Meaning                   |
+| -------- | ------------------------- |
+| Volume   | Huge amount of data       |
+| Velocity | Speed of data generation  |
+| Variety  | Different types of data   |
+| Veracity | Data reliability          |
+| Value    | Useful insights from data |
+
+---
+
+# 3. What is Distributed Computing?
+
+## Definition
+
+Distributed computing is a technique where multiple computers work together to process data and tasks.
+
+---
+
+# 4. Why Distributed Computing is Needed?
+
+## Viva Answer
+
+Because single systems cannot efficiently process massive datasets.
+
+---
+
+# 5. What is Apache Spark?
+
+Most important practical topic.
+
+## Definition
+
+Apache Spark is an open-source distributed computing framework used for fast big data processing.
+
+---
+
+# 6. Features of Apache Spark
+
+## Viva Points
+
+* High speed processing
+* In-memory computation
+* Distributed processing
+* Scalability
+* Fault tolerance
+
+---
+
+# 7. Why Spark is Faster than Hadoop MapReduce?
+
+Very important viva question.
+
+## Answer
+
+Spark performs in-memory processing while Hadoop MapReduce stores intermediate results on disk.
+
+---
+
+# 8. What is In-Memory Computation?
+
+## Definition
+
+Processing data directly in RAM instead of repeatedly accessing disk.
+
+This increases speed significantly.
+
+---
+
+# 9. What is SCALA?
+
+## Definition
+
+SCALA is a high-level programming language used extensively with Apache Spark.
+
+---
+
+# 10. Why SCALA is Used with Spark?
+
+## Viva Answer
+
+Because Spark is internally written in SCALA, giving better compatibility and performance.
+
+---
+
+# 11. What is a Framework?
+
+## Definition
+
+A framework is a platform providing tools and libraries for software development.
+
+---
+
+# 12. Spark Architecture
+
+Important viva topic.
+
+Main components:
+
+* Driver Program
+* Cluster Manager
+* Worker Nodes
+* Executors
+
+---
+
+# 13. Driver Program
+
+## Definition
+
+The main program controlling Spark application execution.
+
+---
+
+# 14. Worker Nodes
+
+## Definition
+
+Systems that perform actual distributed computations.
+
+---
+
+# 15. Executors
+
+## Definition
+
+Processes running tasks and computations on worker nodes.
+
+---
+
+# 16. What is Cluster?
+
+## Definition
+
+A group of interconnected computers working together.
+
+---
+
+# 17. What is Fault Tolerance?
+
+## Definition
+
+Ability of system to continue functioning even if some components fail.
+
+---
+
+# 18. What is Parallel Processing?
+
+## Definition
+
+Executing multiple tasks simultaneously to improve speed.
+
+---
+
+# 19. Spark Core
+
+## Definition
+
+The fundamental engine responsible for memory management and task scheduling in Spark.
+
+---
+
+# 20. What is RDD?
+
+Most important viva question.
+
+## Definition
+
+RDD (Resilient Distributed Dataset) is the basic distributed data structure in Spark.
+
+---
+
+# 21. Features of RDD
+
+## Viva Points
+
+* Distributed
+* Fault-tolerant
+* Immutable
+* Parallel processing support
+
+---
+
+# 22. What is Immutable Data?
+
+## Definition
+
+Immutable data cannot be modified after creation.
+
+New data structures are created instead.
+
+---
+
+# 23. Transformations in Spark
+
+## Definition
+
+Operations that create new RDDs from existing RDDs.
+
+Examples:
+
+* map()
+* filter()
+
+---
+
+# 24. Actions in Spark
+
+## Definition
+
+Operations that produce final output.
+
+Examples:
+
+* collect()
+* count()
+
+---
+
+# 25. Difference Between Transformations and Actions
+
+| Transformations | Actions           |
+| --------------- | ----------------- |
+| Create new RDD  | Produce result    |
+| Lazy execution  | Trigger execution |
+
+---
+
+# 26. What is Lazy Evaluation?
+
+Very important topic.
+
+## Definition
+
+Spark delays execution until action is called.
+
+---
+
+# 27. Advantages of Lazy Evaluation
+
+## Viva Points
+
+* Optimization
+* Reduced computation
+* Better performance
+
+---
+
+# 28. SparkSession
+
+## Definition
+
+Entry point for Spark application.
+
+Used to interact with Spark framework.
+
+---
+
+# 29. Applications of Apache Spark
+
+Used in:
+
+* Big data analytics
+* Machine learning
+* Streaming data
+* Recommendation systems
+* Fraud detection
+
+---
+
+# 30. Difference Between Hadoop and Spark
+
+| Hadoop                | Spark                               |
+| --------------------- | ----------------------------------- |
+| Disk-based processing | In-memory processing                |
+| Slower                | Faster                              |
+| Uses MapReduce        | Uses distributed computation engine |
+
+---
+
+# 31. Why Spark is Popular in Industry?
+
+## Viva Answer
+
+Because it provides fast, scalable, and efficient big data processing.
+
+---
+
+# 32. Important Viva Questions and Answers
+
+---
+
+## Q1. What is Apache Spark?
+
+A distributed computing framework for big data processing.
+
+---
+
+## Q2. What is SCALA?
+
+A programming language commonly used with Spark.
+
+---
+
+## Q3. Why is Spark faster than Hadoop?
+
+Because Spark uses in-memory computation.
+
+---
+
+## Q4. What is RDD?
+
+Resilient Distributed Dataset — basic distributed data structure in Spark.
+
+---
+
+## Q5. What is lazy evaluation?
+
+Spark delays execution until result is required.
+
+---
+
+## Q6. What is distributed computing?
+
+Multiple systems working together for processing.
+
+---
+
+## Q7. What is fault tolerance?
+
+Ability to continue operation despite failures.
+
+---
+
+## Q8. Difference between transformation and action?
+
+Transformation creates new RDD while action produces output.
+
+---
+
+# 33. Practical Flow
+
+```text id="r80r1r"
+Initialize Spark Session
+↓
+Create Spark Program in SCALA
+↓
+Load/Create Data
+↓
+Apply Transformations
+↓
+Execute Actions
+↓
+Process Data in Distributed Manner
+↓
+Display Output
+```
+
+---
+
+# 34. Conclusion of Practical 12
+
+## Viva Conclusion Answer
+
+In this practical, we implemented a simple SCALA program using the Apache Spark framework. We learned concepts such as distributed computing, RDDs, transformations, actions, and in-memory processing. Apache Spark is an important big data framework widely used for fast and scalable data processing in modern analytics systems. 

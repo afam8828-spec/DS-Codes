@@ -1,0 +1,666 @@
+# Practical 2: Data Wrangling-II (Academic Performance Dataset)
+
+In this practical, according to the manual, we:
+
+* Create a synthetic academic dataset
+* Handle missing values
+* Detect and handle outliers
+* Apply data transformations
+* Clean inconsistencies in data 
+
+This practical is extremely important because it teaches **real-world data cleaning techniques**, which are used in:
+
+* Machine Learning
+* Data Analytics
+* AI systems
+* Business Intelligence
+* Predictive Modeling
+
+In viva, examiners mainly focus on:
+
+* Missing values
+* Outliers
+* IQR
+* Imputation
+* Data transformation
+* Skewness
+* Clipping
+* Data consistency
+
+So below are all important concepts in simple language.
+
+---
+
+# 1. What is Data Wrangling?
+
+## Definition
+
+Data wrangling is the process of cleaning, organizing, transforming, and preparing raw data into a useful format.
+
+## Simple Explanation
+
+Real-world datasets are usually:
+
+* incomplete
+* inconsistent
+* noisy
+* unstructured
+
+So we clean them before analysis.
+
+---
+
+# 2. What is a Synthetic Dataset?
+
+Very important viva question.
+
+## Definition
+
+A synthetic dataset is an artificially generated dataset created using programming instead of collecting real-world data.
+
+## In this practical
+
+The manual creates an Academic Performance dataset containing:
+
+* Student ID
+* Age
+* Gender
+* Subject marks
+* Attendance
+* Final grade 
+
+---
+
+# 3. Why Synthetic Dataset is Used?
+
+## Viva Answer
+
+Synthetic datasets are used for:
+
+* learning purposes
+* testing algorithms
+* experimentation
+* privacy protection
+* simulation
+
+without using real sensitive data.
+
+---
+
+# 4. What is Data Cleaning?
+
+## Definition
+
+Data cleaning is the process of detecting and correcting:
+
+* missing values
+* duplicate data
+* invalid entries
+* inconsistent values
+* outliers
+
+---
+
+# 5. What are Missing Values?
+
+One of the most asked viva topics.
+
+## Definition
+
+Missing values are empty or unavailable values in a dataset.
+
+Example:
+
+| Marks |
+| ----- |
+| 85    |
+| NaN   |
+| 90    |
+
+NaN = Not a Number
+
+---
+
+# 6. Causes of Missing Values
+
+## Important Viva Points
+
+* Human errors
+* System failures
+* Data corruption
+* User skipped input
+* Sensor/network problems
+
+---
+
+# 7. Why Missing Values are Dangerous?
+
+## Viva Answer
+
+Missing values reduce data quality and may lead to:
+
+* inaccurate predictions
+* biased results
+* model training problems
+* incorrect analysis
+
+---
+
+# 8. Methods to Handle Missing Values
+
+Very important.
+
+---
+
+## A) Deletion Method
+
+Rows with missing values are removed.
+
+### Advantage
+
+Simple method.
+
+### Disadvantage
+
+Loss of important data.
+
+---
+
+## B) Imputation Method
+
+Missing values are replaced with estimated values.
+
+This practical mainly uses imputation. 
+
+---
+
+# 9. What is Imputation?
+
+## Definition
+
+Imputation is the process of filling missing values using statistical methods.
+
+---
+
+# 10. Types of Imputation
+
+---
+
+## Mean Imputation
+
+Missing value replaced using average.
+
+Formula:
+
+\bar{x} = \frac{\sum x}{n}
+
+### Used For
+
+Normally distributed numerical data.
+
+---
+
+## Median Imputation
+
+Missing value replaced using middle value.
+
+### Best For
+
+Skewed data and outliers.
+
+---
+
+## Mode Imputation
+
+Missing value replaced using most frequent value.
+
+### Used For
+
+Categorical data.
+
+---
+
+# 11. What are Inconsistencies in Data?
+
+## Definition
+
+Inconsistencies are invalid or illogical data values.
+
+Examples:
+
+* Negative attendance
+* Age = 200
+* Invalid grades
+
+The manual checks attendance range and valid grades. 
+
+---
+
+# 12. Data Validation
+
+## Definition
+
+Data validation ensures data follows correct rules and ranges.
+
+Example:
+
+* Attendance should be between 0–100
+* Marks should not be negative
+
+---
+
+# 13. What are Outliers?
+
+Most important viva topic in Practical 2.
+
+## Definition
+
+Outliers are extreme values that are very different from other data points.
+
+Example:
+
+```text id="lfk7j0"
+Marks:
+70, 75, 72, 74, 73, 250
+```
+
+250 is an outlier.
+
+---
+
+# 14. Causes of Outliers
+
+## Important Viva Points
+
+* Data entry mistakes
+* Measurement errors
+* Rare events
+* Experimental errors
+* Natural variation
+
+---
+
+# 15. Why Outliers are Problematic?
+
+## Viva Answer
+
+Outliers can:
+
+* distort statistical calculations
+* affect mean
+* reduce model accuracy
+* create misleading analysis
+
+---
+
+# 16. What is IQR? (Very Important)
+
+## Definition
+
+IQR stands for Interquartile Range.
+
+It measures the spread of middle 50% of data.
+
+The manual uses IQR for outlier detection. 
+
+---
+
+# 17. Quartiles
+
+## Q1 (First Quartile)
+
+25th percentile.
+
+## Q2
+
+Median (50th percentile).
+
+## Q3
+
+75th percentile.
+
+---
+
+# 18. IQR Formula
+
+IQR = Q_3 - Q_1
+
+---
+
+# 19. Outlier Detection Formula
+
+Values outside these limits are considered outliers:
+
+Lower\ Bound = Q_1 - 1.5 \times IQR
+
+Upper\ Bound = Q_3 + 1.5 \times IQR
+
+---
+
+# 20. Why IQR is Preferred?
+
+## Viva Answer
+
+IQR is preferred because:
+
+* robust to outliers
+* works well for skewed data
+* simple and effective
+
+---
+
+# 21. Methods to Handle Outliers
+
+---
+
+## A) Removal
+
+Delete outlier rows.
+
+### Problem
+
+Loss of information.
+
+---
+
+## B) Clipping (Used in Manual)
+
+Outlier values are limited within acceptable range. 
+
+### Example
+
+If maximum allowed marks = 100:
+
+```text id="smjzsr"
+120 → 100
+```
+
+---
+
+## C) Transformation
+
+Apply mathematical transformation.
+
+---
+
+# 22. What is Clipping?
+
+## Definition
+
+Clipping restricts values within lower and upper boundaries.
+
+## Why Used?
+
+To reduce impact of extreme values without deleting data.
+
+---
+
+# 23. What is Data Transformation?
+
+Another very important viva topic.
+
+## Definition
+
+Data transformation means converting data into another format or scale to improve analysis.
+
+---
+
+# 24. Why Data Transformation is Needed?
+
+## Viva Points
+
+* improve distribution
+* reduce skewness
+* improve ML performance
+* stabilize variance
+* normalize data
+
+---
+
+# 25. What is Skewness?
+
+## Definition
+
+Skewness measures asymmetry in data distribution.
+
+The manual checks skewness before and after transformation. 
+
+---
+
+# 26. Types of Skewness
+
+---
+
+## Positive Skew
+
+Tail on right side.
+
+```text id="1u61qm"
+Most values small, few very large
+```
+
+Mean > Median
+
+---
+
+## Negative Skew
+
+Tail on left side.
+
+Mean < Median
+
+---
+
+## Symmetrical Distribution
+
+Mean ≈ Median
+
+---
+
+# 27. What is Log Transformation?
+
+Very important.
+
+## Definition
+
+Log transformation applies logarithm function to reduce skewness.
+
+Manual uses log transformation on Subject 1 marks. 
+
+---
+
+# 28. Why Log Transformation is Used?
+
+## Viva Answer
+
+It:
+
+* reduces skewness
+* compresses large values
+* improves normality
+* stabilizes variance
+
+---
+
+# 29. Log Transformation Formula
+
+x' = \log(x + 1)
+
+---
+
+# 30. What is Data Distribution?
+
+## Definition
+
+Data distribution describes how values are spread across dataset.
+
+Common distributions:
+
+* normal distribution
+* skewed distribution
+* uniform distribution
+
+---
+
+# 31. What is Normal Distribution?
+
+## Definition
+
+A symmetric bell-shaped distribution where:
+
+* mean = median = mode
+
+Very important in statistics and ML.
+
+---
+
+# 32. Why Clean Data is Important for ML?
+
+## Viva Answer
+
+Machine learning models depend heavily on data quality.
+
+Dirty data causes:
+
+* poor predictions
+* overfitting
+* underfitting
+* reduced accuracy
+
+---
+
+# 33. Difference Between Noise and Outlier
+
+| Noise                | Outlier               |
+| -------------------- | --------------------- |
+| Random unwanted data | Extreme unusual value |
+| May occur frequently | Rare occurrence       |
+| Hard to identify     | Easier to identify    |
+
+---
+
+# 34. What is Data Integrity?
+
+## Definition
+
+Data integrity means maintaining:
+
+* accuracy
+* consistency
+* reliability
+
+of data throughout lifecycle.
+
+---
+
+# 35. Important Viva Questions and Answers
+
+---
+
+## Q1. What is data wrangling?
+
+Data wrangling is the process of cleaning and transforming raw data into usable format.
+
+---
+
+## Q2. What are missing values?
+
+Missing values are unavailable or empty entries in a dataset.
+
+---
+
+## Q3. What is imputation?
+
+Imputation is the process of replacing missing values using statistical methods.
+
+---
+
+## Q4. Difference between mean and median imputation?
+
+| Mean Imputation       | Median Imputation  |
+| --------------------- | ------------------ |
+| Uses average          | Uses middle value  |
+| Sensitive to outliers | Robust to outliers |
+
+---
+
+## Q5. What are outliers?
+
+Outliers are extreme values significantly different from normal observations.
+
+---
+
+## Q6. What is IQR?
+
+IQR is the difference between third quartile and first quartile.
+
+---
+
+## Q7. Why are outliers harmful?
+
+They distort analysis and reduce machine learning accuracy.
+
+---
+
+## Q8. What is clipping?
+
+Clipping limits values within predefined boundaries.
+
+---
+
+## Q9. What is skewness?
+
+Skewness measures asymmetry in data distribution.
+
+---
+
+## Q10. Why use log transformation?
+
+To reduce skewness and improve data distribution.
+
+---
+
+# 36. Practical Flow (Very Important for Viva)
+
+Remember this sequence:
+
+```text id="2tj8jo"
+Create Dataset
+↓
+Check Missing Values
+↓
+Apply Imputation
+↓
+Check Inconsistencies
+↓
+Detect Outliers using IQR
+↓
+Handle Outliers
+↓
+Check Skewness
+↓
+Apply Log Transformation
+↓
+Final Clean Dataset
+```
+
+---
+
+# 37. Real-World Applications
+
+This practical is used in:
+
+* Banking systems
+* Healthcare analytics
+* Student performance analysis
+* Fraud detection
+* AI model training
+* Business analytics
+
+---
+
+# 38. Conclusion of Practical 2
+
+## Viva Conclusion Answer
+
+In this practical, we created an academic performance dataset and performed important data wrangling operations such as handling missing values, detecting outliers using IQR, clipping extreme values, and applying log transformation to reduce skewness. These preprocessing techniques improve data quality and prepare the dataset for machine learning and statistical analysis. 

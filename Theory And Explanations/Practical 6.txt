@@ -1,0 +1,382 @@
+# Practical 6: Data Analytics-III — Naïve Bayes Classification
+
+## What We Are Doing in This Practical
+
+In this practical, we use the **Iris dataset** and apply the **Naïve Bayes classification algorithm** to classify flower species.
+The model predicts whether a flower belongs to:
+
+* Iris-setosa
+* Iris-versicolor
+* Iris-virginica
+
+After classification, we evaluate the model using:
+
+* Confusion Matrix
+* Accuracy
+* Precision
+* Recall
+* Error Rate 
+
+This practical is important because it introduces:
+
+* Probabilistic machine learning
+* Bayes theorem
+* Naïve Bayes classifier
+* Multi-class classification
+
+---
+
+# 1. What is Naïve Bayes?
+
+Most important viva topic.
+
+## Definition
+
+Naïve Bayes is a probabilistic supervised machine learning algorithm based on Bayes’ Theorem. 
+
+---
+
+# 2. Why is it Called “Naïve”?
+
+Because it assumes that all features are independent of each other.
+
+Example:
+
+```text id="9jl8yo"
+Petal length is independent of petal width
+```
+
+This assumption is called the naïve assumption.
+
+---
+
+# 3. What is Probability?
+
+## Definition
+
+Probability measures the chance of occurrence of an event.
+
+Range:
+
+0 \leq P(E) \leq 1
+
+Where:
+
+* 0 → impossible event
+* 1 → certain event
+
+---
+
+# 4. Bayes’ Theorem
+
+Most important formula.
+
+According to manual: 
+
+genui{"math_block_widget_always_prefetch_v2":{"content":"P(C|X)=\frac{P(X|C)P(C)}{P(X)}"}}
+
+---
+
+# 5. Meaning of Bayes’ Theorem
+
+It calculates probability of a class based on given features.
+
+Example:
+
+```text id="wwvg0w"
+Probability that flower belongs to Setosa
+based on petal and sepal measurements
+```
+
+---
+
+# 6. Terms in Bayes’ Theorem
+
+| Term | Meaning           |                       |
+| ---- | ----------------- | --------------------- |
+| P(C  | X)                | Posterior Probability |
+| P(X  | C)                | Likelihood            |
+| P(C) | Prior Probability |                       |
+| P(X) | Evidence          |                       |
+
+---
+
+# 7. Prior Probability
+
+## Definition
+
+Initial probability of class before observing data.
+
+Example:
+
+```text id="sg9v4o"
+Probability of flower being Setosa before seeing features
+```
+
+---
+
+# 8. Posterior Probability
+
+## Definition
+
+Updated probability after observing features.
+
+---
+
+# 9. Likelihood
+
+## Definition
+
+Probability of observing features for a given class.
+
+---
+
+# 10. Evidence
+
+## Definition
+
+Total probability of observed data.
+
+---
+
+# 11. Naïve Assumption
+
+Very important viva point.
+
+## Definition
+
+Naïve Bayes assumes all features are conditionally independent given the class label. 
+
+---
+
+# 12. Why Naïve Bayes Works Well Despite Simple Assumption?
+
+## Viva Answer
+
+Because many real-world problems approximately satisfy independence assumption, making Naïve Bayes simple and efficient.
+
+---
+
+# 13. What is Classification in Naïve Bayes?
+
+The algorithm calculates probability for each class and selects the class with highest probability.
+
+---
+
+# 14. Multi-Class Classification
+
+## Definition
+
+Classification involving more than two classes.
+
+In this practical:
+
+```text id="qf2nqg"
+3 flower species
+```
+
+---
+
+# 15. Iris Dataset
+
+This practical again uses Iris dataset for flower classification. 
+
+Features:
+
+* Sepal Length
+* Sepal Width
+* Petal Length
+* Petal Width
+
+---
+
+# 16. Gaussian Naïve Bayes
+
+Important viva question.
+
+## Definition
+
+Gaussian Naïve Bayes is used when features are continuous numerical values.
+
+The manual uses:
+
+```text id="r14j4t"
+GaussianNB
+```
+
+
+
+---
+
+# 17. Why “Gaussian”?
+
+Because it assumes data follows normal (Gaussian) distribution.
+
+---
+
+# 18. Why Feature Scaling is Not Necessary Here?
+
+Important viva question.
+
+## Answer
+
+Naïve Bayes is probability-based and less sensitive to feature scale. 
+
+---
+
+# 19. Advantages of Naïve Bayes
+
+## Viva Points
+
+* Simple
+* Fast
+* Works well on small datasets
+* Efficient for classification
+* Requires less training data
+
+---
+
+# 20. Disadvantages of Naïve Bayes
+
+## Viva Points
+
+* Assumes feature independence
+* Less accurate when features are highly correlated
+* Can oversimplify complex relationships
+
+---
+
+# 21. Difference Between Logistic Regression and Naïve Bayes
+
+| Logistic Regression      | Naïve Bayes                 |
+| ------------------------ | --------------------------- |
+| Discriminative model     | Probabilistic model         |
+| Learns decision boundary | Uses Bayes theorem          |
+| Requires scaling often   | Scaling usually unnecessary |
+
+---
+
+# 22. Why Confusion Matrix is Used Again?
+
+Because it helps evaluate classification model performance.
+
+---
+
+# 23. Accuracy in Naïve Bayes
+
+Measures total correct classifications.
+
+Higher accuracy:
+
+```text id="m4ow0j"
+Better classifier
+```
+
+---
+
+# 24. Precision and Recall
+
+Still important for evaluating classification quality:
+
+* Precision → quality of positive predictions
+* Recall → ability to detect actual positives
+
+---
+
+# 25. Why Naïve Bayes is Popular?
+
+## Viva Answer
+
+Because it is computationally efficient and performs surprisingly well for many classification tasks.
+
+---
+
+# 26. Applications of Naïve Bayes
+
+Used in:
+
+* Spam filtering
+* Text classification
+* Sentiment analysis
+* Medical diagnosis
+* Recommendation systems
+
+---
+
+# 27. Important Viva Questions and Answers
+
+---
+
+## Q1. What is Naïve Bayes?
+
+A probabilistic classification algorithm based on Bayes’ theorem.
+
+---
+
+## Q2. Why is it called naïve?
+
+Because it assumes features are independent.
+
+---
+
+## Q3. What is Bayes’ theorem?
+
+A theorem used to calculate probability of a class given observed features.
+
+---
+
+## Q4. What is Gaussian Naïve Bayes?
+
+Naïve Bayes variant used for continuous numerical data.
+
+---
+
+## Q5. Why scaling is not required in Naïve Bayes?
+
+Because the algorithm works on probabilities rather than distances.
+
+---
+
+## Q6. What type of learning is Naïve Bayes?
+
+Supervised learning.
+
+---
+
+## Q7. What are advantages of Naïve Bayes?
+
+Simple, fast, efficient, and good for classification tasks.
+
+---
+
+## Q8. Main limitation of Naïve Bayes?
+
+It assumes feature independence.
+
+---
+
+# 28. Practical Flow
+
+```text id="6e17m5"
+Load Iris Dataset
+↓
+Split Features and Target
+↓
+Train Gaussian Naïve Bayes Model
+↓
+Predict Flower Species
+↓
+Generate Confusion Matrix
+↓
+Calculate Accuracy and Recall
+↓
+Evaluate Classification Performance
+```
+
+---
+
+# 29. Conclusion of Practical 6
+
+## Viva Conclusion Answer
+
+In this practical, we implemented the Naïve Bayes classification algorithm using the Iris dataset to classify flower species. The model used Bayes’ theorem and probability calculations for prediction. We evaluated the model using confusion matrix, accuracy, precision, recall, and error rate. Naïve Bayes is a simple and efficient probabilistic classifier widely used in machine learning and text analytics. 

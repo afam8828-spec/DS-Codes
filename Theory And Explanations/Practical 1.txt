@@ -1,0 +1,608 @@
+# Practical 1: Data Wrangling-I (Preprocessing and Normalizing Dataset in Python)
+
+According to your manual, Practical 1 focuses on:
+
+* Importing libraries
+* Loading dataset
+* Data preprocessing
+* Checking missing values
+* Exploring dataset
+* Data transformation
+* Data normalization
+* Converting categorical data into numerical format 
+
+This practical is extremely important because **Data Wrangling is the first step of every Data Science and Machine Learning project**.
+In viva, examiners usually ask:
+
+* Why preprocessing is needed?
+* What is normalization?
+* Difference between cleaning and transformation?
+* Why categorical variables are converted?
+* What happens if data contains missing values?
+
+So below are all important viva concepts in simple language.
+
+---
+
+# 1. What is Data Wrangling?
+
+## Definition
+
+Data Wrangling (also called Data Cleaning or Data Preprocessing) is the process of converting raw, unorganized, incomplete data into clean and usable data. 
+
+## Simple Explanation
+
+Real-world data is messy:
+
+* Some values are missing
+* Some columns contain wrong formats
+* Some values are duplicated
+* Some features are categorical
+* Numerical values may have different ranges
+
+So before analysis or machine learning, we clean and prepare the dataset.
+
+---
+
+# 2. Why Data Wrangling is Important?
+
+## Viva Answer
+
+Data wrangling is important because machine learning algorithms require clean and properly formatted data. Incorrect or missing data can reduce model accuracy and produce wrong predictions.
+
+## Important Points
+
+* Improves data quality
+* Removes inconsistencies
+* Helps in better analysis
+* Improves ML model accuracy
+* Reduces errors
+* Makes dataset standardized
+
+---
+
+# 3. Major Steps in Data Wrangling
+
+According to the manual, main steps are: 
+
+1. Import libraries
+2. Load dataset
+3. Explore dataset
+4. Handle missing values
+5. Data transformation
+6. Normalization
+7. Convert categorical data to numerical form
+
+You should remember this sequence for viva.
+
+---
+
+# 4. Important Python Libraries
+
+The manual uses these libraries: 
+
+## Pandas
+
+Used for:
+
+* Loading dataset
+* Data manipulation
+* Handling tables
+
+### Important functions
+
+```python
+pd.read_csv()
+df.head()
+df.describe()
+df.isnull()
+```
+
+---
+
+## NumPy
+
+Used for:
+
+* Numerical operations
+* Arrays
+* Mathematical calculations
+
+Example:
+
+```python
+np.mean()
+np.array()
+```
+
+---
+
+## Matplotlib
+
+Used for:
+
+* Plotting graphs
+* Visualizations
+
+Example:
+
+```python
+plt.plot()
+plt.show()
+```
+
+---
+
+## Seaborn
+
+Used for:
+
+* Advanced visualization
+* Statistical graphs
+
+Example:
+
+```python
+sns.heatmap()
+sns.histplot()
+```
+
+---
+
+## Scikit-learn
+
+Used for:
+
+* Machine Learning
+* Normalization
+* Data preprocessing
+
+Example:
+
+```python
+MinMaxScaler()
+```
+
+---
+
+# 5. Dataset
+
+The manual uses Titanic Dataset from Kaggle. 
+
+## Important Titanic Features
+
+| Column   | Meaning         |
+| -------- | --------------- |
+| Age      | Passenger age   |
+| Sex      | Gender          |
+| Fare     | Ticket price    |
+| Survived | Survival status |
+| Embarked | Boarding port   |
+
+---
+
+# 6. What is a DataFrame?
+
+## Viva Definition
+
+A DataFrame is a two-dimensional tabular data structure in Pandas consisting of rows and columns.
+
+## Simple Example
+
+Like an Excel sheet.
+
+| Name  | Age |
+| ----- | --- |
+| Aman  | 21  |
+| Rahul | 22  |
+
+---
+
+# 7. Loading Dataset
+
+Manual uses: 
+
+```python
+df = pd.read_csv('titanic.csv')
+```
+
+## Viva Question:
+
+### What does `read_csv()` do?
+
+It loads CSV file data into a Pandas DataFrame.
+
+---
+
+# 8. Dataset Exploration
+
+Important functions:
+
+## `df.head()`
+
+Shows first 5 rows.
+
+## `df.shape`
+
+Returns number of rows and columns.
+
+Example:
+
+```python
+(891, 12)
+```
+
+Meaning:
+
+* 891 rows
+* 12 columns
+
+---
+
+## `df.dtypes`
+
+Shows datatype of each column.
+
+Example:
+
+```python
+int64
+float64
+object
+```
+
+---
+
+## `df.describe()`
+
+Gives statistical summary:
+
+* Mean
+* Standard deviation
+* Minimum
+* Maximum
+* Percentiles
+
+
+
+---
+
+# 9. Missing Values
+
+One of the most important viva topics.
+
+## What are Missing Values?
+
+Missing values are empty or unavailable values in dataset.
+
+Example:
+
+| Age |
+| --- |
+| 22  |
+| NaN |
+| 35  |
+
+NaN = Not a Number
+
+---
+
+## How to Detect Missing Values?
+
+```python
+df.isnull().sum()
+```
+
+This returns total missing values column-wise. 
+
+---
+
+# 10. Why Missing Values are Problematic?
+
+## Viva Points
+
+* Reduce accuracy
+* Cause training errors
+* Create bias
+* Disturb statistical calculations
+
+---
+
+# 11. Methods to Handle Missing Values
+
+## A) Remove Rows
+
+```python
+df.dropna()
+```
+
+Used when missing data is very small.
+
+---
+
+## B) Fill Missing Values
+
+### Mean Imputation
+
+```python
+df.fillna(df.mean())
+```
+
+Used for numerical data.
+
+---
+
+### Median Imputation
+
+Better when outliers exist.
+
+---
+
+### Mode Imputation
+
+Used for categorical data.
+
+---
+
+# 12. Data Types
+
+Important data types:
+
+| Data Type | Meaning          |
+| --------- | ---------------- |
+| int       | Integer          |
+| float     | Decimal          |
+| object    | String/Text      |
+| category  | Categorical data |
+
+---
+
+# 13. Type Conversion
+
+Manual uses: 
+
+```python
+pd.to_numeric()
+astype()
+```
+
+## Why Conversion is Needed?
+
+Because ML algorithms require proper datatype.
+
+Example:
+
+* Age should be numeric
+* Survived can be category
+
+---
+
+# 14. What is Data Normalization?
+
+Very important viva question.
+
+## Definition
+
+Normalization is the process of scaling numerical data into a fixed range, usually between 0 and 1.
+
+
+
+---
+
+# 15. Why Normalization is Needed?
+
+## Viva Points
+
+* Removes scale differences
+* Improves ML performance
+* Faster convergence
+* Prevents domination of large values
+
+---
+
+# 16. Min-Max Normalization
+
+Manual uses MinMaxScaler. 
+
+Formula:
+
+x' = \frac{x - x_{min}}{x_{max} - x_{min}}
+
+## Output Range
+
+Between 0 and 1.
+
+---
+
+# 17. What is Feature Scaling?
+
+Feature scaling means bringing all numerical features to similar scale.
+
+Example:
+
+| Feature | Range           |
+| ------- | --------------- |
+| Age     | 1–80            |
+| Salary  | 10,000–1,00,000 |
+
+Without scaling, salary dominates model.
+
+---
+
+# 18. Categorical Variables
+
+## Definition
+
+Variables containing labels/categories.
+
+Examples:
+
+* Male/Female
+* Yes/No
+* City names
+
+Machine learning algorithms cannot directly process text categories.
+
+---
+
+# 19. Encoding
+
+Encoding converts categorical data into numerical form.
+
+---
+
+## A) Label Encoding
+
+Example:
+
+| Gender | Encoded |
+| ------ | ------- |
+| Male   | 0       |
+| Female | 1       |
+
+Manual uses:
+
+```python
+map({'male':0, 'female':1})
+```
+
+
+
+---
+
+## B) One Hot Encoding
+
+Used when categories have no order.
+
+Example:
+
+| Embarked |
+| -------- |
+| C        |
+| Q        |
+| S        |
+
+Converted into:
+
+| Embarked_C | Embarked_Q | Embarked_S |
+| ---------- | ---------- | ---------- |
+| 1          | 0          | 0          |
+
+Manual uses:
+
+```python
+pd.get_dummies()
+```
+
+
+
+---
+
+# 20. Difference Between Label Encoding and One-Hot Encoding
+
+| Label Encoding            | One Hot Encoding          |
+| ------------------------- | ------------------------- |
+| Converts to single column | Creates multiple columns  |
+| Suitable for binary data  | Suitable for nominal data |
+| Can introduce order       | No order introduced       |
+
+---
+
+# 21. What is Data Cleaning?
+
+Data cleaning means:
+
+* Removing duplicates
+* Handling missing values
+* Correcting invalid data
+* Standardizing formats
+
+---
+
+# 22. What is Data Transformation?
+
+Transformation means changing data format or structure.
+
+Examples:
+
+* Encoding
+* Scaling
+* Log transformation
+* Aggregation
+
+---
+
+# 23. Important Viva Questions with Answers
+
+---
+
+## Q1. What is data wrangling?
+
+Data wrangling is the process of cleaning, transforming, and preparing raw data for analysis or machine learning.
+
+---
+
+## Q2. Why preprocessing is required?
+
+Preprocessing improves data quality and increases machine learning model accuracy.
+
+---
+
+## Q3. What are missing values?
+
+Missing values are unavailable or empty values present in a dataset.
+
+---
+
+## Q4. What is normalization?
+
+Normalization scales numerical data into a fixed range, usually 0 to 1.
+
+---
+
+## Q5. Why is normalization important?
+
+It prevents features with larger values from dominating machine learning algorithms.
+
+---
+
+## Q6. What is categorical data?
+
+Categorical data contains labels or categories such as gender or city names.
+
+---
+
+## Q7. What is encoding?
+
+Encoding converts categorical variables into numerical format.
+
+---
+
+## Q8. Difference between normalization and standardization?
+
+| Normalization        | Standardization   |
+| -------------------- | ----------------- |
+| Range 0–1            | Mean = 0, Std = 1 |
+| Uses Min-Max scaling | Uses Z-score      |
+
+---
+
+## Q9. What is a DataFrame?
+
+A DataFrame is a tabular data structure in Pandas consisting of rows and columns.
+
+---
+
+## Q10. Why is data cleaning necessary?
+
+Because dirty data leads to inaccurate analysis and poor model performance.
+
+---
+
+
+
+# 25. Conclusion of Practical 1
+
+## Viva Conclusion Answer
+
+In this practical, we performed data wrangling operations such as loading the dataset, checking missing values, preprocessing, normalization, datatype conversion, and encoding categorical variables. These steps help in preparing clean and standardized data for machine learning and analysis. 

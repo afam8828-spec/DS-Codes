@@ -1,0 +1,360 @@
+# Practical 8: Data Visualization-I — Titanic Dataset Exploration and Fare Distribution
+
+## What We Are Doing in This Practical
+
+In this practical, we use the **Titanic dataset** and perform **Exploratory Data Analysis (EDA)** using visualization techniques.
+Mainly, we:
+
+* Explore patterns in Titanic data
+* Analyze passenger information
+* Plot histogram of ticket fares
+* Understand data distribution using Seaborn visualization 
+
+This practical is important because visualization helps us:
+
+* understand datasets easily
+* identify patterns
+* detect outliers
+* analyze distributions
+
+---
+
+# 1. What is Data Visualization?
+
+## Definition
+
+Data visualization is the graphical representation of data using charts, graphs, and plots.
+
+---
+
+# 2. Why Data Visualization is Important?
+
+## Viva Answer
+
+Visualization helps in:
+
+* understanding large datasets
+* identifying patterns and trends
+* detecting anomalies
+* making better decisions
+
+---
+
+# 3. What is EDA (Exploratory Data Analysis)?
+
+Most important viva topic.
+
+## Definition
+
+EDA is the process of analyzing and summarizing datasets using statistics and visualization techniques before model building.
+
+---
+
+# 4. Goals of EDA
+
+* Understand dataset structure
+* Find relationships
+* Detect missing values
+* Identify outliers
+* Analyze distributions
+
+---
+
+# 5. Titanic Dataset
+
+Very important topic.
+
+## Definition
+
+A famous dataset containing information about Titanic passengers. 
+
+---
+
+# 6. Important Features in Titanic Dataset
+
+| Feature  | Meaning         |
+| -------- | --------------- |
+| Survived | Survival status |
+| Pclass   | Passenger class |
+| Sex      | Gender          |
+| Age      | Passenger age   |
+| Fare     | Ticket price    |
+| Embarked | Boarding port   |
+
+---
+
+# 7. What is Seaborn?
+
+## Definition
+
+Seaborn is a Python visualization library built on Matplotlib for creating statistical graphs easily. 
+
+---
+
+# 8. Advantages of Seaborn
+
+## Viva Points
+
+* Attractive visualizations
+* Easy syntax
+* Statistical plotting support
+* Better integration with Pandas
+
+---
+
+# 9. What is Histogram?
+
+Most important topic.
+
+## Definition
+
+Histogram is a graph showing frequency distribution of continuous numerical data. 
+
+---
+
+# 10. Purpose of Histogram
+
+Used to:
+
+* understand distribution
+* identify skewness
+* detect outliers
+* observe frequency patterns
+
+---
+
+# 11. What are Bins in Histogram?
+
+## Definition
+
+Bins are intervals used to group numerical data in histogram.
+
+Example:
+
+```text id="df9x8j"
+0–10
+10–20
+20–30
+```
+
+---
+
+# 12. Fare Distribution
+
+In this practical, histogram is plotted for:
+
+```text id="x5g4dq"
+Fare column
+```
+
+to analyze ticket price distribution. 
+
+---
+
+# 13. What is Distribution?
+
+## Definition
+
+Distribution describes how data values are spread across dataset.
+
+---
+
+# 14. Skewed Distribution
+
+Important viva topic.
+
+## Definition
+
+When data is not symmetrically distributed.
+
+Titanic fare distribution is usually:
+
+```text id="l5w2qq"
+Positively skewed
+```
+
+because few passengers paid very high fares.
+
+---
+
+# 15. Positive Skewness
+
+## Definition
+
+Distribution with long tail on right side.
+
+Characteristics:
+
+```text id="bjlwm9"
+Mean > Median
+```
+
+---
+
+# 16. What is Frequency?
+
+## Definition
+
+Frequency represents number of observations within a particular interval.
+
+---
+
+# 17. What is KDE (Kernel Density Estimate)?
+
+Mentioned in manual with histogram. 
+
+## Definition
+
+KDE is a smooth curve representing probability density of data.
+
+---
+
+# 18. Why KDE is Used?
+
+## Viva Answer
+
+To understand distribution smoothly instead of only bar intervals.
+
+---
+
+# 19. Matplotlib
+
+## Definition
+
+Matplotlib is a Python plotting library used for creating graphs and visualizations.
+
+Seaborn internally uses Matplotlib.
+
+---
+
+# 20. Data Patterns
+
+Visualization helps identify:
+
+* survival trends
+* class differences
+* fare distribution
+* passenger demographics
+
+---
+
+# 21. Outliers in Visualization
+
+Histograms can reveal extreme values.
+
+Example:
+
+```text id="8pd2p8"
+Very high ticket fares
+```
+
+---
+
+# 22. Why Visualization is Important in Data Science?
+
+## Viva Answer
+
+Visualization converts complex numerical data into understandable graphical form.
+
+---
+
+# 23. Applications of Data Visualization
+
+Used in:
+
+* Business analytics
+* Finance
+* Healthcare
+* AI dashboards
+* Research analysis
+* Market analysis
+
+---
+
+# 24. Difference Between Histogram and Bar Chart
+
+| Histogram             | Bar Chart        |
+| --------------------- | ---------------- |
+| Continuous data       | Categorical data |
+| Bars touch each other | Bars separated   |
+| Shows distribution    | Shows comparison |
+
+---
+
+# 25. Important Viva Questions and Answers
+
+---
+
+## Q1. What is data visualization?
+
+Graphical representation of data using plots and charts.
+
+---
+
+## Q2. What is EDA?
+
+Exploratory Data Analysis used to understand datasets before modeling.
+
+---
+
+## Q3. What is histogram?
+
+A graph showing frequency distribution of continuous data.
+
+---
+
+## Q4. What are bins?
+
+Intervals used for grouping values in histogram.
+
+---
+
+## Q5. What is skewness?
+
+Measure of asymmetry in distribution.
+
+---
+
+## Q6. What is KDE?
+
+A smooth density curve representing data distribution.
+
+---
+
+## Q7. Why Seaborn is used?
+
+For easy and attractive statistical visualizations.
+
+---
+
+## Q8. Difference between histogram and bar chart?
+
+Histogram is for continuous data while bar chart is for categorical data.
+
+---
+
+# 26. Practical Flow
+
+```text id="22um3o"
+Load Titanic Dataset
+↓
+Explore Dataset
+↓
+Analyze Fare Column
+↓
+Create Histogram
+↓
+Apply KDE Curve
+↓
+Observe Distribution
+↓
+Identify Patterns and Outliers
+```
+
+---
+
+# 27. Conclusion of Practical 8
+
+## Viva Conclusion Answer
+
+In this practical, we explored the Titanic dataset using data visualization techniques. We plotted a histogram of passenger fare distribution using Seaborn and analyzed patterns, skewness, and outliers in the dataset. Data visualization and EDA help in understanding data characteristics before applying machine learning models. 
